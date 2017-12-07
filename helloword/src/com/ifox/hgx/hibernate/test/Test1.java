@@ -4,6 +4,7 @@ import com.ifox.hgx.hibernate.helloword.News;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
@@ -25,7 +26,7 @@ public class Test1 {
         //5.x ServiceRegistry的实现需用StandardServiceRegistryBuilder之前版本用的是 ServiceRegistryBuilder
 
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure().build();
-        //   new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build() ;
+          // new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build() ;
         sessionFactory = configuration.buildSessionFactory(serviceRegistry);
         // sessionFactory = new MetadataSources(serviceRegistry).buildMetadata().buildSessionFactory() ;
         //2.创建Session对象

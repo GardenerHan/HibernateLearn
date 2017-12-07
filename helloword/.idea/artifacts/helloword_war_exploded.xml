@@ -9,6 +9,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Hibernate" />
+          <element id="library" level="module" name="JUnit4" module-name="helloword" />
         </element>
       </element>
     </root>
