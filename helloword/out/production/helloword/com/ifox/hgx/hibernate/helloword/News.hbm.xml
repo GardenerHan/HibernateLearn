@@ -4,7 +4,8 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.ifox.hgx.hibernate.helloword.News" table="NEWS">
+    <class name="com.ifox.hgx.hibernate.helloword.News" table="NEWS" >
+        <!--select-before-update="true" 一般不要设置-->
         <id name="id" type="java.lang.Integer">
             <!--列名-->
             <column name="ID"></column>
