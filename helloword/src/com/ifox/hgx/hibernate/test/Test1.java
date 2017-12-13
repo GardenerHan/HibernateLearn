@@ -183,5 +183,9 @@ public class Test1 {
 
         News news1 = session.get(News.class,4) ;
 
+        transaction.commit();
+        session.close();
+        sessionFactory.close() ;
+
     }
 }
