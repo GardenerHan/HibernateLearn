@@ -19,7 +19,11 @@
         <property name="format_sql">true</property>
         <!--指定生成的数据表的策略-->
         <!--这里有坑，注意-->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
+
+        <!--设置事务的隔离级别-->
+        <property name="connection.isolation">2</property>
+
         <!--制定关联的.hbm.xml 文件-->
         <mapping resource="com/ifox/hgx/hibernate/helloword/News.hbm.xml"></mapping>
 
