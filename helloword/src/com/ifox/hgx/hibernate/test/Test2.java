@@ -6,11 +6,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.jdbc.Work;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.sql.Connection;
 import java.sql.Date;
+import java.sql.SQLException;
 
 public class Test2 {
     private Configuration cfg;
@@ -156,9 +159,24 @@ public class Test2 {
         News news = session.get(News.class,1) ;
         News news1 = session.get(News.class,2) ;
         news.setTitle("AA");
-        news.setTitle("BB");
+        news1.setTitle("BB");
 
         session.evict(news);
 
+    }
+    /*
+    储存过程
+     */
+    @Test
+    public  void testDoWork(){
+        session.doWork(
+                new Work(){
+                    @Override
+                    public void execute(Connection connection) throws SQLException {
+                        System.out.println(connection);
+//                        com.mysql.jdbc.JDBC4Connection@65f87a2c
+                    }
+                }
+        ) ;
     }
 }
