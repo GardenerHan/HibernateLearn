@@ -4,16 +4,25 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.ifox.hgx.hibernate.helloword.News" table="NEWS" >
+    <class name="com.ifox.hgx.hibernate.helloword.News" table="NEWS"
+           dynamic-update="true"><!--dynamic-update="true" 动态更新-->
         <!--select-before-update="true" 一般不要设置-->
         <id name="id" type="java.lang.Integer">
             <!--列名-->
             <column name="ID"></column>
             <!--指定主键的生成方式 native:使用数据库的本地方式 -->
             <generator class="native"></generator>
+            <!--hibernate推荐使用代理主键，使用整型-->
+            <!--
+                increment:自增 并发问题
+                identity:数据库底层自增
+                sequence：底层数据库序列来生成标识符
+                hilo：高低算法 不依赖数据库  5.2 移除了
+            -->
         </id>
-        <property name="title" type="java.lang.String">
-            <column name="TITLE"></column>
+
+        <property name="title" type="string" update="false" unique="true" index="news_index" length="20" column="TITLE">
+
         </property>
         <property name="author" type="java.lang.String">
             <column name="AUTHOR"></column>

@@ -5,6 +5,7 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.jdbc.Work;
 import org.junit.After;
@@ -178,5 +179,16 @@ public class Test2 {
                     }
                 }
         ) ;
+    }
+    @Test
+    public void testDynamicUpdate(){
+        News news = session.get(News.class,1) ;
+        news.setAuthor("AABllll");
+    }
+    @Test
+    public void testIdGenerator(){
+        News news = new News("AAlA","aaaa",new Date(new java.util.Date().getTime())) ;
+        session.save(news) ;
+
     }
 }

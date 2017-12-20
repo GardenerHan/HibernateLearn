@@ -40,5 +40,28 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library" exported="" scope="PROVIDED">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/openResources/hibernate/c3p0/c3p0-0.9.5.2.jar!/" />
+          <root url="jar://D:/openResources/hibernate/c3p0/hibernate-c3p0-5.2.12.Final.jar!/" />
+          <root url="jar://D:/openResources/hibernate/c3p0/mchange-commons-java-0.2.11.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/src" />
+          <root url="file://$MODULE_DIR$/../../PhysicalProject/src" />
+          <root url="file://$MODULE_DIR$/../../Struts2Learn/CustomInterceptor/src" />
+          <root url="file://$MODULE_DIR$/../../Struts2Learn/Internationalization/src" />
+          <root url="file://$MODULE_DIR$/../../Struts2Learn/clarificationVerification/src" />
+          <root url="file://$MODULE_DIR$/../../Struts2Learn/customValidator/src" />
+          <root url="file://$MODULE_DIR$/../../Struts2Learn/formToSubmitQuestionRepeatedly/src" />
+          <root url="file://$MODULE_DIR$/../../Struts2Learn/struts2Interceptor/src" />
+          <root url="file://$MODULE_DIR$/../../Struts2Learn/struts2Label/src" />
+          <root url="file://$MODULE_DIR$/../../Struts2Learn/typeConversion/src" />
+          <root url="file://$MODULE_DIR$/../../Struts2Learn/uploadDownload/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

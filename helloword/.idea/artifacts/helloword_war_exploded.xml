@@ -10,6 +10,10 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Hibernate" />
           <element id="library" level="module" name="JUnit4" module-name="helloword" />
+          <element id="file-copy" path="D:/openResources/hibernate/c3p0/c3p0-0.9.5.2.jar" />
+          <element id="file-copy" path="D:/openResources/hibernate/c3p0/hibernate-c3p0-5.2.12.Final.jar" />
+          <element id="file-copy" path="D:/openResources/hibernate/c3p0/mchange-commons-java-0.2.11.jar" />
+          <element id="dir-copy" path="$PROJECT_DIR$/../.." />
         </element>
       </element>
     </root>

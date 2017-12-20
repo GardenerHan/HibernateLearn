@@ -26,6 +26,22 @@
 
         <!--删除对象后实际OID置为null-->
         <property name="use_identifier_rollback">true</property>
+
+        <!--配置c3p0数据源-->
+        <property name="hibernate.c3p0.max_size">10</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+        <property name="hibernate.c3p0.idle_test_period">2000</property>
+        <property name="hibernate.c3p0.timeout">2000</property>
+        <property name="hibernate.c3p0.max_statements">10</property>
+
+
+        <!--对于Mysql无效，对于Oracle有效-->
+        <!--1.设置JDBC的statement读取数据库的时候每次从数据库中去除的记录条数-->
+        <property name="hibernate.jdbc.fetch_size">100</property>
+        <!--2.设置对数据库进行批量删除、批量更新和批量插入的时候的批次大小-->
+        <property name="hibernate.jdbc.batch_size">30</property>
+
         <!--制定关联的.hbm.xml 文件-->
         <mapping resource="com/ifox/hgx/hibernate/helloword/News.hbm.xml"></mapping>
 
