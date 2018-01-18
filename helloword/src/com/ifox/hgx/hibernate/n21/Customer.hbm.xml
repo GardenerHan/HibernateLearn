@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ifox.hgx.hibernate.n21.Customer" table="CUSTOMERS">
+       <id name="customerId" type="java.lang.Integer">
+           <column name="CUSTOMER_ID"></column>
+           <!--id 手动添加-->
+           <generator class="native"></generator>
+       </id>
+        <property name="customerName" type="java.lang.String">
+            <column name="CUSTOMER_NAME"></column>
+        </property>
+    </class>
+</hibernate-mapping>

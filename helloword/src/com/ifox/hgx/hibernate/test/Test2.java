@@ -1,17 +1,18 @@
 package com.ifox.hgx.hibernate.test;
 
 import com.ifox.hgx.hibernate.helloword.News;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.jdbc.Work;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
@@ -190,5 +191,14 @@ public class Test2 {
         News news = new News("AAlA","aaaa",new Date(new java.util.Date().getTime())) ;
         session.save(news) ;
 
+    }
+
+    @Test
+    public void TestGetBlob() throws IOException, SQLException {
+        News news = session.get(News.class,1) ;
+        Blob image = news.getImage() ;
+
+        InputStream in = image.getBinaryStream() ;
+        System.out.println(in.available());
     }
 }

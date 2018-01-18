@@ -12,25 +12,76 @@
     <schema id="6" parent="1" name="physicalcreation"/>
     <schema id="7" parent="1" name="sys"/>
     <table id="8" parent="2" name="news"/>
-    <column id="9" parent="8" name="ID">
+    <table id="9" parent="2" name="worker"/>
+    <column id="10" parent="8" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="10" parent="8" name="TITLE">
+    <column id="11" parent="8" name="TITLE">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="11" parent="8" name="AUTHOR">
+    <column id="12" parent="8" name="AUTHOR">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="12" parent="8" name="DATE">
+    <column id="13" parent="8" name="descx">
       <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="14" parent="8" name="DATE">
+      <Position>5</Position>
       <DataType>date|0</DataType>
     </column>
-    <key id="13" parent="8" name="PRIMARY">
+    <column id="15" parent="8" name="CONTENT">
+      <Position>6</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="16" parent="8" name="IMAGE">
+      <Position>7</Position>
+      <DataType>mediumblob|0</DataType>
+    </column>
+    <index id="17" parent="8" name="news_index">
+      <ColNames>TITLE</ColNames>
+    </index>
+    <index id="18" parent="8" name="UK_duq2gjdo5k53otrakypw0888b">
+      <ColNames>TITLE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="19" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="20" parent="8" name="UK_duq2gjdo5k53otrakypw0888b">
+      <ColNames>TITLE</ColNames>
+      <UnderlyingIndexName>UK_duq2gjdo5k53otrakypw0888b</UnderlyingIndexName>
+    </key>
+    <column id="21" parent="9" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="22" parent="9" name="NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="23" parent="9" name="MONTHLY_PAY">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="24" parent="9" name="YEAR_PAY">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="25" parent="9" name="VOCATION_WITH_PAY">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="26" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>

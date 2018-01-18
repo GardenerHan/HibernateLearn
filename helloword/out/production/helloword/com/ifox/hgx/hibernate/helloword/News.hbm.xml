@@ -13,12 +13,11 @@
             <!--指定主键的生成方式 native:使用数据库的本地方式 -->
             <generator class="native"></generator>
             <!--hibernate推荐使用代理主键，使用整型-->
-            <!--
-                increment:自增 并发问题
-                identity:数据库底层自增
-                sequence：底层数据库序列来生成标识符
-                hilo：高低算法 不依赖数据库  5.2 移除了
-            -->
+            <!---->
+                <!--increment:自增 并发问题-->
+                <!--identity:数据库底层自增-->
+                <!--sequence：底层数据库序列来生成标识符-->
+
         </id>
 
         <property name="title" type="string" update="false" unique="true" index="news_index" length="20" column="TITLE">
@@ -27,8 +26,20 @@
         <property name="author" type="java.lang.String">
             <column name="AUTHOR"></column>
         </property>
-        <property name="date" type="java.sql.Date">
+        <!--映射派生属性 formula="(sql)"-->
+        <!--<property name="desc" formula="sql()"></property>-->
+        <property name="descx"></property>
+        <property name="date" type="date">
             <column name="DATE"></column>
+        </property>
+
+        <!--映射大对象-->
+        <property name="content" type="materialized_clob">
+            <column name="CONTENT" sql-type="mediumtext"></column>
+        </property>
+        <!--<property name="content" type="java.lang.String"></property>-->
+        <property name="image" type="blob">
+            <column name="IMAGE" sql-type="mediumblob"></column>
         </property>
     </class>
 </hibernate-mapping>
