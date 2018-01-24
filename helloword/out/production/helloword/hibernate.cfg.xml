@@ -57,5 +57,8 @@
         <mapping resource="com/ifox/hgx/hibernate/n2n/Item.hbm.xml"></mapping>
         <mapping resource="com/ifox/hgx/hibernate/n2n/both/Category.hbm.xml"></mapping>
         <mapping resource="com/ifox/hgx/hibernate/n2n/both/Item.hbm.xml"></mapping>
+        <mapping resource="com/ifox/hgx/hibernate/subclass/Person.hbm.xml"></mapping>
+        <mapping resource="com/ifox/hgx/hibernate/joined/subclass/Person.hbm.xml"></mapping>
+        <mapping resource="com/ifox/hgx/hibernate/union/subclass/Person.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

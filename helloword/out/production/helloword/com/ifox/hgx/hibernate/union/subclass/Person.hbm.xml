@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ifox.hgx.hibernate.union.subclass">
+    <class name="Person" table="PERSONS_U" >
+       <id name="id" type="java.lang.Integer">
+           <column name="ID"></column>
+           <generator class="increment"></generator>
+       </id>
+
+
+        <property name="name" type="java.lang.String">
+            <column name="NAME"></column>
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="AGE"></column>
+        </property>
+
+        <union-subclass name="Student" table="TABLES">
+            <property name="school" column="SCHOOL" type="string"></property>
+        </union-subclass>
+
+    </class>
+</hibernate-mapping>
