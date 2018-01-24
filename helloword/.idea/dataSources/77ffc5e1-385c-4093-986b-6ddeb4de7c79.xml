@@ -17,488 +17,533 @@
     <table id="11" parent="2" name="categories_items"/>
     <table id="12" parent="2" name="customers"/>
     <table id="13" parent="2" name="customers_both"/>
-    <table id="14" parent="2" name="departments"/>
-    <table id="15" parent="2" name="departments_p"/>
-    <table id="16" parent="2" name="items"/>
-    <table id="17" parent="2" name="items_b"/>
-    <table id="18" parent="2" name="managers"/>
-    <table id="19" parent="2" name="managers_p"/>
-    <table id="20" parent="2" name="news"/>
-    <table id="21" parent="2" name="orders"/>
-    <table id="22" parent="2" name="orders_both"/>
-    <table id="23" parent="2" name="persons"/>
-    <table id="24" parent="2" name="persons_j"/>
-    <table id="25" parent="2" name="persons_u"/>
-    <table id="26" parent="2" name="students"/>
-    <table id="27" parent="2" name="tables"/>
-    <table id="28" parent="2" name="worker"/>
-    <column id="29" parent="8" name="CATEGORY_ID">
+    <table id="14" parent="2" name="customers_s"/>
+    <table id="15" parent="2" name="departments"/>
+    <table id="16" parent="2" name="departments_p"/>
+    <table id="17" parent="2" name="items"/>
+    <table id="18" parent="2" name="items_b"/>
+    <table id="19" parent="2" name="managers"/>
+    <table id="20" parent="2" name="managers_p"/>
+    <table id="21" parent="2" name="news"/>
+    <table id="22" parent="2" name="orders"/>
+    <table id="23" parent="2" name="orders_both"/>
+    <table id="24" parent="2" name="orders_s"/>
+    <table id="25" parent="2" name="persons"/>
+    <table id="26" parent="2" name="persons_j"/>
+    <table id="27" parent="2" name="persons_u"/>
+    <table id="28" parent="2" name="students"/>
+    <table id="29" parent="2" name="tables"/>
+    <table id="30" parent="2" name="worker"/>
+    <column id="31" parent="8" name="CATEGORY_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="30" parent="8" name="CATEGORY_NAME">
+    <column id="32" parent="8" name="CATEGORY_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="31" parent="8" name="PRIMARY">
+    <key id="33" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CATEGORY_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="32" parent="9" name="CATEGORY_ID">
+    <column id="34" parent="9" name="CATEGORY_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="33" parent="9" name="CATEGORY_NAME">
+    <column id="35" parent="9" name="CATEGORY_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="34" parent="9" name="PRIMARY">
+    <key id="36" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CATEGORY_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="35" parent="10" name="C_ID">
+    <column id="37" parent="10" name="C_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="10" name="I_ID">
+    <column id="38" parent="10" name="I_ID">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="37" parent="10" name="FKbxowo0c0sk598qdpfgo3ql41o">
+    <index id="39" parent="10" name="FKbxowo0c0sk598qdpfgo3ql41o">
       <ColNames>C_ID</ColNames>
     </index>
-    <key id="38" parent="10" name="PRIMARY">
+    <key id="40" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>I_ID
 C_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="39" parent="10" name="FKbxowo0c0sk598qdpfgo3ql41o">
+    <foreign-key id="41" parent="10" name="FKbxowo0c0sk598qdpfgo3ql41o">
       <ColNames>C_ID</ColNames>
       <RefSchemaName>hibernate</RefSchemaName>
       <RefTableName>categories_b</RefTableName>
       <RefColNames>CATEGORY_ID</RefColNames>
     </foreign-key>
-    <foreign-key id="40" parent="10" name="FKm2rchstoml2wvde1rh022ds7t">
+    <foreign-key id="42" parent="10" name="FKm2rchstoml2wvde1rh022ds7t">
       <ColNames>I_ID</ColNames>
       <RefSchemaName>hibernate</RefSchemaName>
       <RefTableName>items_b</RefTableName>
       <RefColNames>ITEM_ID</RefColNames>
     </foreign-key>
-    <column id="41" parent="11" name="C_ID">
+    <column id="43" parent="11" name="C_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="42" parent="11" name="I_ID">
+    <column id="44" parent="11" name="I_ID">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="43" parent="11" name="FKapmdmq8lb9r8dx9xcvr0s3ull">
+    <index id="45" parent="11" name="FKapmdmq8lb9r8dx9xcvr0s3ull">
       <ColNames>I_ID</ColNames>
     </index>
-    <key id="44" parent="11" name="PRIMARY">
+    <key id="46" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>C_ID
 I_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="45" parent="11" name="FK9x44r4y633v6gw9tyxlhqn3kk">
+    <foreign-key id="47" parent="11" name="FK9x44r4y633v6gw9tyxlhqn3kk">
       <ColNames>C_ID</ColNames>
       <RefSchemaName>hibernate</RefSchemaName>
       <RefTableName>categories</RefTableName>
       <RefColNames>CATEGORY_ID</RefColNames>
     </foreign-key>
-    <foreign-key id="46" parent="11" name="FKapmdmq8lb9r8dx9xcvr0s3ull">
+    <foreign-key id="48" parent="11" name="FKapmdmq8lb9r8dx9xcvr0s3ull">
       <ColNames>I_ID</ColNames>
       <RefSchemaName>hibernate</RefSchemaName>
       <RefTableName>items</RefTableName>
       <RefColNames>ITEM_ID</RefColNames>
     </foreign-key>
-    <column id="47" parent="12" name="CUSTOMER_ID">
+    <column id="49" parent="12" name="CUSTOMER_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="48" parent="12" name="CUSTOMER_NAME">
+    <column id="50" parent="12" name="CUSTOMER_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="49" parent="12" name="PRIMARY">
+    <key id="51" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CUSTOMER_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="50" parent="13" name="CUSTOMER_ID">
+    <column id="52" parent="13" name="CUSTOMER_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="51" parent="13" name="CUSTOMER_NAME">
+    <column id="53" parent="13" name="CUSTOMER_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="52" parent="13" name="PRIMARY">
+    <key id="54" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CUSTOMER_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="53" parent="14" name="DEPARTMENT_ID">
+    <column id="55" parent="14" name="CUSTOMER_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="54" parent="14" name="DEPARTMENT_NAME">
+    <column id="56" parent="14" name="CUSTOMER_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="55" parent="14" name="MANAGER_ID">
+    <key id="57" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CUSTOMER_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="15" name="DEPARTMENT_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="59" parent="15" name="DEPARTMENT_NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="60" parent="15" name="MANAGER_ID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="56" parent="14" name="UK_hpi0ma0bedsi4fya3pk6ul6i6">
+    <index id="61" parent="15" name="UK_hpi0ma0bedsi4fya3pk6ul6i6">
       <ColNames>MANAGER_ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="57" parent="14" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>DEPARTMENT_ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="58" parent="14" name="UK_hpi0ma0bedsi4fya3pk6ul6i6">
-      <ColNames>MANAGER_ID</ColNames>
-      <UnderlyingIndexName>UK_hpi0ma0bedsi4fya3pk6ul6i6</UnderlyingIndexName>
-    </key>
-    <foreign-key id="59" parent="14" name="FK1nnq1xa7ex8kegs9u3m5xkwad">
-      <ColNames>MANAGER_ID</ColNames>
-      <RefSchemaName>hibernate</RefSchemaName>
-      <RefTableName>managers</RefTableName>
-      <RefColNames>MANAGER_ID</RefColNames>
-    </foreign-key>
-    <column id="60" parent="15" name="DEPARTMENT_ID">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="61" parent="15" name="DEPARTMENT_NAME">
-      <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
-    </column>
     <key id="62" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>DEPARTMENT_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="63" parent="15" name="FK6oe0sghwkc8bknxn341ybeiy3">
+    <key id="63" parent="15" name="UK_hpi0ma0bedsi4fya3pk6ul6i6">
+      <ColNames>MANAGER_ID</ColNames>
+      <UnderlyingIndexName>UK_hpi0ma0bedsi4fya3pk6ul6i6</UnderlyingIndexName>
+    </key>
+    <foreign-key id="64" parent="15" name="FK1nnq1xa7ex8kegs9u3m5xkwad">
+      <ColNames>MANAGER_ID</ColNames>
+      <RefSchemaName>hibernate</RefSchemaName>
+      <RefTableName>managers</RefTableName>
+      <RefColNames>MANAGER_ID</RefColNames>
+    </foreign-key>
+    <column id="65" parent="16" name="DEPARTMENT_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="16" name="DEPARTMENT_NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="67" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DEPARTMENT_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="68" parent="16" name="FK6oe0sghwkc8bknxn341ybeiy3">
       <ColNames>DEPARTMENT_ID</ColNames>
       <RefSchemaName>hibernate</RefSchemaName>
       <RefTableName>managers_p</RefTableName>
       <RefColNames>MANAGER_ID</RefColNames>
     </foreign-key>
-    <column id="64" parent="16" name="ITEM_ID">
+    <column id="69" parent="17" name="ITEM_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="65" parent="16" name="ITEM_NAME">
+    <column id="70" parent="17" name="ITEM_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="66" parent="16" name="PRIMARY">
+    <key id="71" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ITEM_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="67" parent="17" name="ITEM_ID">
+    <column id="72" parent="18" name="ITEM_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="68" parent="17" name="ITEM_NAME">
+    <column id="73" parent="18" name="ITEM_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="69" parent="17" name="PRIMARY">
+    <key id="74" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ITEM_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="70" parent="18" name="MANAGER_ID">
+    <column id="75" parent="19" name="MANAGER_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="71" parent="18" name="MANAGER_NAME">
+    <column id="76" parent="19" name="MANAGER_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="72" parent="18" name="PRIMARY">
+    <key id="77" parent="19" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MANAGER_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="73" parent="19" name="MANAGER_ID">
+    <column id="78" parent="20" name="MANAGER_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="74" parent="19" name="MANAGER_NAME">
+    <column id="79" parent="20" name="MANAGER_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="75" parent="19" name="PRIMARY">
+    <key id="80" parent="20" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MANAGER_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="76" parent="20" name="ID">
+    <column id="81" parent="21" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="77" parent="20" name="TITLE">
+    <column id="82" parent="21" name="TITLE">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="78" parent="20" name="AUTHOR">
+    <column id="83" parent="21" name="AUTHOR">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="79" parent="20" name="descx">
+    <column id="84" parent="21" name="descx">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="80" parent="20" name="DATE">
+    <column id="85" parent="21" name="DATE">
       <Position>5</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="81" parent="20" name="CONTENT">
+    <column id="86" parent="21" name="CONTENT">
       <Position>6</Position>
       <DataType>mediumtext|0</DataType>
     </column>
-    <column id="82" parent="20" name="IMAGE">
+    <column id="87" parent="21" name="IMAGE">
       <Position>7</Position>
       <DataType>mediumblob|0</DataType>
     </column>
-    <index id="83" parent="20" name="news_index">
+    <index id="88" parent="21" name="news_index">
       <ColNames>TITLE</ColNames>
     </index>
-    <index id="84" parent="20" name="UK_duq2gjdo5k53otrakypw0888b">
+    <index id="89" parent="21" name="UK_duq2gjdo5k53otrakypw0888b">
       <ColNames>TITLE</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="85" parent="20" name="PRIMARY">
+    <key id="90" parent="21" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="86" parent="20" name="UK_duq2gjdo5k53otrakypw0888b">
+    <key id="91" parent="21" name="UK_duq2gjdo5k53otrakypw0888b">
       <ColNames>TITLE</ColNames>
       <UnderlyingIndexName>UK_duq2gjdo5k53otrakypw0888b</UnderlyingIndexName>
     </key>
-    <column id="87" parent="21" name="ORDER_ID">
+    <column id="92" parent="22" name="ORDER_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="88" parent="21" name="ORDER_NAME">
+    <column id="93" parent="22" name="ORDER_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="89" parent="21" name="CUSTOMER_ID">
+    <column id="94" parent="22" name="CUSTOMER_ID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="90" parent="21" name="FKflgddyesjyik2ro2p501yys8r">
+    <index id="95" parent="22" name="FKflgddyesjyik2ro2p501yys8r">
       <ColNames>CUSTOMER_ID</ColNames>
     </index>
-    <key id="91" parent="21" name="PRIMARY">
+    <key id="96" parent="22" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ORDER_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="92" parent="21" name="FKflgddyesjyik2ro2p501yys8r">
+    <foreign-key id="97" parent="22" name="FKflgddyesjyik2ro2p501yys8r">
       <ColNames>CUSTOMER_ID</ColNames>
       <RefSchemaName>hibernate</RefSchemaName>
       <RefTableName>customers</RefTableName>
       <RefColNames>CUSTOMER_ID</RefColNames>
     </foreign-key>
-    <column id="93" parent="22" name="ORDER_ID">
+    <column id="98" parent="23" name="ORDER_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="94" parent="22" name="ORDER_NAME">
+    <column id="99" parent="23" name="ORDER_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="95" parent="22" name="CUSTOMER_ID">
+    <column id="100" parent="23" name="CUSTOMER_ID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="96" parent="22" name="FKplio6ppl0xdstafg9j7to77ah">
+    <index id="101" parent="23" name="FKplio6ppl0xdstafg9j7to77ah">
       <ColNames>CUSTOMER_ID</ColNames>
     </index>
-    <key id="97" parent="22" name="PRIMARY">
+    <key id="102" parent="23" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ORDER_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="98" parent="22" name="FKplio6ppl0xdstafg9j7to77ah">
+    <foreign-key id="103" parent="23" name="FKplio6ppl0xdstafg9j7to77ah">
       <ColNames>CUSTOMER_ID</ColNames>
       <RefSchemaName>hibernate</RefSchemaName>
       <RefTableName>customers_both</RefTableName>
       <RefColNames>CUSTOMER_ID</RefColNames>
     </foreign-key>
-    <column id="99" parent="23" name="ID">
+    <column id="104" parent="24" name="ORDER_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="100" parent="23" name="TYPE">
+    <column id="105" parent="24" name="ORDER_NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="106" parent="24" name="CUSTOMER_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="107" parent="24" name="FKftgahesefnktki1uah0klm4vn">
+      <ColNames>CUSTOMER_ID</ColNames>
+    </index>
+    <key id="108" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ORDER_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="109" parent="24" name="FKftgahesefnktki1uah0klm4vn">
+      <ColNames>CUSTOMER_ID</ColNames>
+      <RefSchemaName>hibernate</RefSchemaName>
+      <RefTableName>customers_s</RefTableName>
+      <RefColNames>CUSTOMER_ID</RefColNames>
+    </foreign-key>
+    <column id="110" parent="25" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="111" parent="25" name="TYPE">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="101" parent="23" name="NAME">
+    <column id="112" parent="25" name="NAME">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="102" parent="23" name="AGE">
+    <column id="113" parent="25" name="AGE">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="103" parent="23" name="SCHOOL">
+    <column id="114" parent="25" name="SCHOOL">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="104" parent="23" name="PRIMARY">
+    <key id="115" parent="25" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="105" parent="24" name="ID">
+    <column id="116" parent="26" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="106" parent="24" name="NAME">
+    <column id="117" parent="26" name="NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="107" parent="24" name="AGE">
+    <column id="118" parent="26" name="AGE">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <key id="108" parent="24" name="PRIMARY">
+    <key id="119" parent="26" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="109" parent="25" name="ID">
+    <column id="120" parent="27" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="110" parent="25" name="NAME">
+    <column id="121" parent="27" name="NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="111" parent="25" name="AGE">
+    <column id="122" parent="27" name="AGE">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <key id="112" parent="25" name="PRIMARY">
+    <key id="123" parent="27" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="113" parent="26" name="STUDENT_ID">
+    <column id="124" parent="28" name="STUDENT_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="114" parent="26" name="SCHOOL">
+    <column id="125" parent="28" name="SCHOOL">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="115" parent="26" name="PRIMARY">
+    <key id="126" parent="28" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>STUDENT_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="116" parent="26" name="FKtfsw292nmqfwpgj6a8rydxo7s">
+    <foreign-key id="127" parent="28" name="FKtfsw292nmqfwpgj6a8rydxo7s">
       <ColNames>STUDENT_ID</ColNames>
       <RefSchemaName>hibernate</RefSchemaName>
       <RefTableName>persons_j</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="117" parent="27" name="ID">
+    <column id="128" parent="29" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="118" parent="27" name="NAME">
+    <column id="129" parent="29" name="NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="119" parent="27" name="AGE">
+    <column id="130" parent="29" name="AGE">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="120" parent="27" name="SCHOOL">
+    <column id="131" parent="29" name="SCHOOL">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="121" parent="27" name="PRIMARY">
+    <key id="132" parent="29" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="122" parent="28" name="ID">
+    <column id="133" parent="30" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="123" parent="28" name="NAME">
+    <column id="134" parent="30" name="NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="124" parent="28" name="MONTHLY_PAY">
+    <column id="135" parent="30" name="MONTHLY_PAY">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="125" parent="28" name="YEAR_PAY">
+    <column id="136" parent="30" name="YEAR_PAY">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="126" parent="28" name="VOCATION_WITH_PAY">
+    <column id="137" parent="30" name="VOCATION_WITH_PAY">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <key id="127" parent="28" name="PRIMARY">
+    <key id="138" parent="30" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
