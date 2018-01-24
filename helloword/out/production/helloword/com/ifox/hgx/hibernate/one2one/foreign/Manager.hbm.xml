@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ifox.hgx.hibernate.one2one.foreign">
+    <class name="Manager" table="MANAGERS">
+       <id name="mgrId" type="java.lang.Integer">
+           <column name="MANAGER_ID"></column>
+           <!--id 手动添加-->
+           <generator class="native"></generator>
+       </id>
+        <property name="mgrName" type="java.lang.String">
+            <column name="MANAGER_NAME"></column>
+        </property>
+        <!--映射一对一的关联关系：对应的数据表中已经有外键了，当前持久化类使用one-to-one进行映射-->
+        <!--property-ref属性：
+            没有外键的一端需要使用one-to-one元素，该元素使用property-ref属性指定使用被关连实体主键意外的字段作为关联字段
+        -->
+        <one-to-one name="department" class="Department" property-ref="manager"></one-to-one>
+    </class>
+</hibernate-mapping>
