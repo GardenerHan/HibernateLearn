@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ifox.hgx.hibernate.n2n">
+    <class name="Category" table="CATEGORIES">
+       <id name="id" type="java.lang.Integer">
+           <column name="CATEGORY_ID"></column>
+
+           <generator class="native"></generator>
+       </id>
+        <property name="name" type="java.lang.String">
+            <column name="CATEGORY_NAME"></column>
+        </property>
+        <!--table：指定中间表-->
+        <set name="items" table="CATEGORIES_ITEMS">
+            <key>
+                <column name="C_ID"></column>
+            </key>
+            <!--使用many-to-many 指定多对多的关联关系，column执行Set集合中的持久化类在中间表的外键列的名称-->
+            <many-to-many class="Item" column="I_ID"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

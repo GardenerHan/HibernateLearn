@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ifox.hgx.hibernate.n2n.both">
+    <class name="Item" table="ITEMS_B">
+       <id name="id" type="java.lang.Integer">
+           <column name="ITEM_ID"></column>
+           <!--id 手动添加-->
+           <generator class="native"></generator>
+       </id>
+        <property name="name" type="java.lang.String">
+            <column name="ITEM_NAME"></column>
+        </property>
+        <set name="categories" table="CATEGORIES_B_ITEMS_B">
+            <key column="I_ID"></key>
+            <many-to-many class="Category" column="C_ID"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

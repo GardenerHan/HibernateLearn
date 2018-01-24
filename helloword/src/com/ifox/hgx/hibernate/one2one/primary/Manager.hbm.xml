@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ifox.hgx.hibernate.one2one.primary">
+    <class name="Manager" table="MANAGERS_p">
+       <id name="mgrId" type="java.lang.Integer">
+           <column name="MANAGER_ID"></column>
+           <!--id 手动添加-->
+           <generator class="native"></generator>
+       </id>
+        <property name="mgrName" type="java.lang.String">
+            <column name="MANAGER_NAME"></column>
+        </property>
+
+        <one-to-one name="department" class="Department"></one-to-one>
+    </class>
+</hibernate-mapping>

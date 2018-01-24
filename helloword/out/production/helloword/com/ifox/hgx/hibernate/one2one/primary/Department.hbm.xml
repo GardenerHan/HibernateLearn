@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ifox.hgx.hibernate.one2one.primary">
+    <class name="Department" table="DEPARTMENTS_p">
+        <id name="deptId" type="java.lang.Integer">
+            <column name="DEPARTMENT_ID"></column>
+
+            <!--使用外键的方式生成主键-->
+            <generator class="foreign">
+                <!--param 属性指定使用当前持久化类的那一个属性的主键作为外键-->
+                <param name="property">manager</param>
+            </generator>
+        </id>
+        <property name="deptName" type="java.lang.String">
+            <column name="DEPARTMENT_NAME"></column>
+        </property>
+        <!--foreign 应该增加constrained="true"，添加主键约束-->
+        <one-to-one  name="manager" class="Manager" constrained="true"></one-to-one>
+    </class>
+</hibernate-mapping>

@@ -43,13 +43,19 @@
         <property name="hibernate.jdbc.batch_size">30</property>
 
         <!--制定关联的.hbm.xml 文件-->
-        <mapping resource="com/ifox/hgx/hibernate/entities/Worker.hbm.xml"></mapping>
-        <mapping resource="com/ifox/hgx/hibernate/helloword/News.hbm.xml"></mapping>
-        <mapping resource="com/ifox/hgx/hibernate/n21/Customer.hbm.xml"></mapping>
-        <mapping resource="com/ifox/hgx/hibernate/n21/Order.hbm.xml"></mapping>
-        <mapping resource="com/ifox/hgx/hibernate/n21/both/Order.hbm.xml"></mapping>
-        <mapping resource="com/ifox/hgx/hibernate/n21/both/Customer.hbm.xml"></mapping>
-        <mapping resource="com/ifox/hgx/hibernate/one2one/foreign/Department.hbm.xml"></mapping>
-        <mapping resource="com/ifox/hgx/hibernate/one2one/foreign/Manager.hbm.xml"></mapping>
+        <!--<mapping resource="com/ifox/hgx/hibernate/entities/Worker.hbm.xml"></mapping>-->
+        <!--<mapping resource="com/ifox/hgx/hibernate/helloword/News.hbm.xml"></mapping>-->
+        <!--<mapping resource="com/ifox/hgx/hibernate/n21/Customer.hbm.xml"></mapping>-->
+        <!--<mapping resource="com/ifox/hgx/hibernate/n21/Order.hbm.xml"></mapping>-->
+        <!--<mapping resource="com/ifox/hgx/hibernate/n21/both/Order.hbm.xml"></mapping>-->
+        <!--<mapping resource="com/ifox/hgx/hibernate/n21/both/Customer.hbm.xml"></mapping>-->
+        <!--<mapping resource="com/ifox/hgx/hibernate/one2one/foreign/Department.hbm.xml"></mapping>-->
+        <!--<mapping resource="com/ifox/hgx/hibernate/one2one/foreign/Manager.hbm.xml"></mapping>-->
+        <!--<mapping resource="com/ifox/hgx/hibernate/one2one/primary/Manager.hbm.xml"></mapping>-->
+        <!--<mapping resource="com/ifox/hgx/hibernate/one2one/primary/Department.hbm.xml"></mapping>-->
+        <mapping resource="com/ifox/hgx/hibernate/n2n/Category.hbm.xml"></mapping>
+        <mapping resource="com/ifox/hgx/hibernate/n2n/Item.hbm.xml"></mapping>
+        <mapping resource="com/ifox/hgx/hibernate/n2n/both/Category.hbm.xml"></mapping>
+        <mapping resource="com/ifox/hgx/hibernate/n2n/both/Item.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>
